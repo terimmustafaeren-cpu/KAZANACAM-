@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KAZANACAM™ — Başarı Seninle Başlar!</title>
+<meta name="description" content="KAZANACAM™ — Öğrenci odaklı, eğlenceli ve güvenli eğitim portalı (demo)." />
+<link rel="icon" href="assets/logo.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/logo.svg" alt="KAZANACAM logo" class="logo" />
+    <div>
+      <h1>KAZANACAM<span class="tm">™</span></h1>
+      <p class="slogan" id="slogan">Başarı Seninle Başlar!</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <select id="langSelect" aria-label="Dil seçin">
+      <option value="tr">Türkçe</option>
+      <option value="en">English</option>
+    </select>
+    <input id="search" class="search" placeholder="Ara: 6. sınıf türkçe..." />
+    <button id="githubBtn" class="btn ghost">Yayınla</button>
+  </div>
+</header>
+
+<main class="container">
+  <aside class="sidebar card">
+    <h2>Sınıf Seç</h2>
+    <div id="grades" class="grade-grid"></div>
+
+    <h3>Dersler</h3>
+    <div id="lessons" class="lessons"></div>
+
+    <div class="card small safe">
+      <strong>Günün Motivasyonu</strong>
+      <p id="motivation">Hazırlanıyor...</p>
+    </div>
+  </aside>
+
+  <section class="content card">
+    <div class="toolbar">
+      <div id="breadcrumb" class="muted">Anasayfa</div>
+      <div>
+        <button id="toggleTheme" class="btn ghost">Tema</button>
+        <button id="printBtn" class="btn">Yazdır</button>
+      </div>
+    </div>
+
+    <div>
+      <input id="filter" class="search" placeholder="Konu filtrele..." />
+    </div>
+
+    <div id="topicGrid" class="topic-grid" aria-live="polite"></div>
+
+    <div id="topicPanel" class="topic-panel" hidden>
+      <div class="topic-header">
+        <div>
+          <h3 id="topicTitle"></h3>
+          <div id="topicMeta" class="muted"></div>
+        </div>
+        <div class="topic-actions">
+          <button id="fetchMeb" class="btn primary">MEB'den Canlı Al</button>
+          <button id="showAnswer" class="btn ghost">Cevabı Göster</button>
+        </div>
+      </div>
+      <div id="mebPreview" class="mebPreview"></div>
+    </div>
+  </section>
+
+  <aside class="rightcard card">
+    <h3>Akıllı Çalışma Takvimi</h3>
+    <div id="calendar" class="calendar"></div>
+
+    <h4>İlerleme</h4>
+    <div id="progressList" class="muted small">Henüz tamamlanan konu yok.</div>
+
+    <hr/>
+    <p class="muted small">Bu demo tek dosya olarak çalışır. Üretim için sunucu ve veritabanı gereklidir.</p>
+  </aside>
+</main>
+
+<footer class="footer muted">
+  © <span id="year"></span> KAZANACAM™ — Tüm hakları saklıdır (demo).
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
